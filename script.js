@@ -6,7 +6,7 @@ function dov(){
         console.log(element);
         addtimer(index);
         setTimeout(function(){
-            if(index == lop.length){
+            if(index == lop.length-1){
             dov();
         }
     },1000);
