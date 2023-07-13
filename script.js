@@ -14,7 +14,7 @@ function dov(){
 }
 }
 function addtimer(params) {
-    document.querySelectorAll("#status").text = params;
+    document.querySelectorAll("#status").innerHTML = params;
 }
 window.onload = function(){
     dov();
