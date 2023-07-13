@@ -10,11 +10,12 @@ function dov(){
             dov();
         }
     },1000);
+    console.log(index);
 
 }
 }
 function addtimer(params) {
-    document.querySelectorAll("#status").innerHTML = params;
+    document.getElementById("status").innerHTML = params;
 }
 window.onload = function(){
     dov();
