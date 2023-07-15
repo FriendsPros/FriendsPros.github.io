@@ -14,9 +14,33 @@ function dov(){
 
 }
 }
+function urlfilename(name) {
+    var sait = [
+      ["user_table_db",["im.php"]],
+    ];
+    for (var i = 0; i < sait.length; i++) {
+      if (sait[i][0] == name) {return sait[i][1];}else {}
+    }
+  }
+  function urlname(name) {
+    var sait = [
+      ["домашня",[window.origin+"/"]]
+    ];
+    for (var i = 0; i < sait.length; i++) {
+      if (sait[i][0] == name) {return sait[i][1];}else {}
+    }
+  }
+  function mmp(params) {
+    var datas_login =  { login: login, password: password};
+    $.ajax({url:urlname("домашня")+urlfilename("user_table_db"), data: datas_login, type: 'POST', success:function(response){
+    console.log(response);
+  
+    }});   
+  }
 function addtimer(params) {
     document.getElementById("status").innerHTML = params;
 }
 window.onload = function(){
     dov();
+    mmp();
 }
