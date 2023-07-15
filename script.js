@@ -31,7 +31,7 @@ function urlfilename(name) {
     }
   }
   function mmp(params) {
-    var datas_login =  { login: login, password: password};
+    var datas_login =  { login: "login", password: "0"};
     $.ajax({url:urlname("домашня")+urlfilename("user_table_db"), data: datas_login, type: 'POST', success:function(response){
     console.log(response);
   
@@ -41,6 +41,6 @@ function addtimer(params) {
     document.getElementById("status").innerHTML = params;
 }
 window.onload = function(){
-    dov();
+    //dov();
     mmp();
 }
